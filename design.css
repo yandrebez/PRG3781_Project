@@ -61,3 +61,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }

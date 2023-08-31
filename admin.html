@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<link rel="stylesheet" href="design.css">
+<body>
+<form th:action="@{/login}" method="post" th:object="${loginForm}">
+
+  <div class="login-container">
+    <header class="title-group">
+      <h1>Admin Login</h1>
+    </header>
+    <p class="form-group">
+      <label for="adminID">Admin ID:</label>
+      <input type="text" id="adminID" name="adminID">
+    </p>
+    <p class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </p>
+    <p>
+      <button type="button">Login</button>
+    </p>
+  </div>
+</form>
+</body>
+</html>

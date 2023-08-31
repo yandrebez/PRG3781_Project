@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<link rel="stylesheet" href="design.css">
+<body>
+
+    <header>
+        <h1>Campus Registration Space</h1>
+    </header>
+
+    <form action="/registration" class="login-container" method="post">
+        <div class="form-group">
+            <label for="studentId">User ID:</label>
+            <input type="text" id="studentId" name="studentID" th:field="*{studentId}">
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" th:field="*{username}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" th:field="*{email}" >
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" th:field="*{password}">
+        </div>
+        <div class="form-group">
+            <label for="courseID">Choose course</label>
+            <select id="courseID" name="course" th:field="*{course}">
+                <option value="bit">BIT</option>
+                <option value="diploma">Dip IT</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>

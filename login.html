@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<link rel="stylesheet" href="design.css">
+
+<body>
+    <header>
+        <h1>Campus Login Space</h1>
+
+    </header>
+
+    <form th:action="@{/login}" method="post">
+        <div class="login-container">
+            <p class="form-group">
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+            </p>
+            <p class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </p>
+            <p>
+                <button type="button"> Login </button>
+                <a th:href="@{/registration}" target="_blank"> Create an account </a>
+            </p>
+        </div>
+    </form>
+
+</body>
+</html>
